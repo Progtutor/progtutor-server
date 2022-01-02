@@ -8,7 +8,7 @@ const config = {
     port: process.env.PORT_DB,
     user: process.env.USER_DB,
     password: process.env.PWD_DB,
-    database: process.env.DATABASE_DB
+    database: process.env.NAME_DB
 }
 
 const pool = new Pool(config)
