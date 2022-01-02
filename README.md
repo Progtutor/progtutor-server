@@ -5,7 +5,7 @@ Para executar a aplicação completa localmente, siga as intruções a seguir:
 
 ### Pré-requisitos:
 
-Antes de começar, você vai precisar ter instalado em sua máquina as seguintes ferramentas:
+Antes de começar, você vai precisar clonar este repositório e ter instalado em sua máquina as seguintes ferramentas:
 
 ```
 NodeJS - Versão: 16.x.x
