@@ -14,7 +14,7 @@
       "db": "node ./database/UpdateDB.js",
       "build": "npm i --production && node app.js"
     },
-    "author": "",
+    "author": "Progtutor",
     "license": "ISC",
     "description": "",
     "dependencies": {
