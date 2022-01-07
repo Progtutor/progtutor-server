@@ -9,6 +9,7 @@ app.use(express.json({limit: "50mb"}))
 app.use(cors({credentials: true, origin: "http://localhost:3001"}))
 
 app.use("/", require("./controllers/TesteController"))
+app.use("/auth", require("./controllers/AuthController"))
 
 app.use((req, res) => {
     res.status(404).send({error: "not found"})

@@ -1,5 +1,6 @@
 const router = require("express").Router()
 const TesteService = require("../services/TesteService")
+const {auth} = require("../services/AuthService")
 
 // mapped to "/"
 
@@ -13,7 +14,7 @@ router.get("/", async(req, res) => {
     }
 })
 
-router.post("/", async(req, res) => {
+router.post("/", auth, async(req, res) => {
     const user = req.body
     try {
         await TesteService.save(user)
