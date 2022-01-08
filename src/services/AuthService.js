@@ -1,16 +1,17 @@
 require("dotenv").config()
-const jwt = require("jsonwebtoken")
+
 const {promisify} = require("util")
+const jwt = require("jsonwebtoken")
 
 const AuthService = module.exports = {
 
     expiresIn: 21600,
     cookieName: "jwtoken",
-    secretKey: process.env.AUTH_KEY,
+    secretKey: process.env.SECRET_KEY,
 
     auth: async function(req, res, next) {
         try {
-            const token = req.cookies.jwtoken
+            const token = req.cookies[AuthService.cookieName]
             req.user = await promisify(jwt.verify)(token, AuthService.secretKey)
             return next()
         } catch (error) {

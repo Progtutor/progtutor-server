@@ -1,6 +1,6 @@
 module.exports = {
 
-    Teste: require("./models/Teste"),
+    User: require("./models/User"),
 
     list: function() {
         return Object.values(this)
